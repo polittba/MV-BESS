@@ -1,0 +1,15 @@
+# Word temp/lock files
+~$*.docx
+~$*.doc
+~$*.xlsx
+~$*.pptx
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
