@@ -40,11 +40,11 @@ three plant data buses inside the Control Building:
    traffic between `GRID2` / GDC and the GE DCS.
 3. **PDH — Plant Data Highway** (green) — top-level plant bus that
    carries NTP, the BSC server pair, EWS, Historian, Control Room HMI
-   servers (CRM*SVR), the Unit Server/HMIs, and the Mark VIe controllers.
-4. **UDH — Unit Data Highway** (pink) — unit-level bus that carries
-   excitation, starting, vibration, and ancillary monitoring devices into
-   each unit, segmented from the PDH by a `Fortinet FW` and a
-   `Cisco ASA FW`.
+   servers (CRM*SVR), and the per-unit Unit Server/HMIs.
+4. **UDH — Unit Data Highway** (pink) — unit-level bus that carries the
+   **Mark VIe controllers**, excitation, starting, vibration, and
+   ancillary monitoring devices into each unit, segmented from the PDH
+   by a `Fortinet FW` and a `Cisco ASA FW`.
 5. **Bently Nevada Network** (blue) — dedicated machinery-protection
    segment that connects every unit's Bently Nevada 3500 vibration
    monitor and Blade Health Monitor.
@@ -78,19 +78,22 @@ flowchart TB
         direction LR
         subgraph GT3A["GT3A"]
             direction TB
-            GT3A_HMI["Unit Server/HMI<br/>+ Mark VIe Controller"]
+            GT3A_HMI["Unit Server/HMI"]
+            GT3A_MK["Mark VIe Controller"]
             GT3A_EXC["EX2100e Exciter<br/>+ LX2100e LCI"]
             GT3A_BN["BN 3500 Vib Mon<br/>+ Blade Health Mon"]
         end
         subgraph GT3B["GT3B"]
             direction TB
-            GT3B_HMI["Unit Server/HMI<br/>+ Mark VIe Controller"]
+            GT3B_HMI["Unit Server/HMI"]
+            GT3B_MK["Mark VIe Controller"]
             GT3B_EXC["EX2100e Exciter<br/>+ ePDA / GHM"]
             GT3B_BN["BN 3500 Vib Mon<br/>+ Blade Health Mon"]
         end
         subgraph ST3["ST3"]
             direction TB
-            ST3_HMI["Unit Server/HMI<br/>+ Mark VIe Controller"]
+            ST3_HMI["Unit Server/HMI"]
+            ST3_MK["Mark VIe Controller"]
             ST3_EXC["EX2100e Exciter<br/>&nbsp;"]
             ST3_BN["BN 3500 Vib Mon<br/>&nbsp;"]
         end
@@ -110,19 +113,22 @@ flowchart TB
         direction LR
         subgraph GT4A["GT4A"]
             direction TB
-            GT4A_HMI["Unit Server/HMI<br/>+ Mark VIe Controller"]
+            GT4A_HMI["Unit Server/HMI"]
+            GT4A_MK["Mark VIe Controller"]
             GT4A_EXC["EX2100e Exciter<br/>+ LX2100e LCI"]
             GT4A_BN["BN 3500 Vib Mon<br/>+ Blade Health Mon"]
         end
         subgraph GT4B["GT4B"]
             direction TB
-            GT4B_HMI["Unit Server/HMI<br/>+ Mark VIe Controller"]
+            GT4B_HMI["Unit Server/HMI"]
+            GT4B_MK["Mark VIe Controller"]
             GT4B_EXC["EX2100e Exciter<br/>+ ePDA / GHM"]
             GT4B_BN["BN 3500 Vib Mon<br/>+ Blade Health Mon"]
         end
         subgraph ST4["ST4"]
             direction TB
-            ST4_HMI["Unit Server/HMI<br/>+ Mark VIe Controller"]
+            ST4_HMI["Unit Server/HMI"]
+            ST4_MK["Mark VIe Controller"]
             ST4_EXC["EX2100e Exciter<br/>&nbsp;"]
             ST4_BN["BN 3500 Vib Mon<br/>&nbsp;"]
         end
@@ -143,6 +149,14 @@ flowchart TB
     CRM4 --- GT4A_HMI
     CRM4 --- GT4B_HMI
     CRM4 --- ST4_HMI
+
+    %% UDH (post-ASA) to per-unit Mark VIe Controllers
+    ASA --- GT3A_MK
+    ASA --- GT3B_MK
+    ASA --- ST3_MK
+    ASA --- GT4A_MK
+    ASA --- GT4B_MK
+    ASA --- ST4_MK
 
     %% UDH (post-ASA) to unit excitation/starting
     ASA --- GT3A_EXC
@@ -168,7 +182,7 @@ flowchart TB
 
     %% ---- Node class assignments ----
     class SHARED,CRM3,CRM4,GT3A_HMI,GT3B_HMI,ST3_HMI,GT4A_HMI,GT4B_HMI,ST4_HMI pdh
-    class OSM,BNS1,GT3A_EXC,GT3B_EXC,ST3_EXC,GT4A_EXC,GT4B_EXC,ST4_EXC udh
+    class OSM,BNS1,GT3A_MK,GT3B_MK,ST3_MK,GT4A_MK,GT4B_MK,ST4_MK,GT3A_EXC,GT3B_EXC,ST3_EXC,GT4A_EXC,GT4B_EXC,ST4_EXC udh
     class GT3A_BN,GT3B_BN,ST3_BN,GT4A_BN,GT4B_BN,ST4_BN bn
     class FORTI,ASA fw
 
@@ -187,36 +201,56 @@ flowchart TB
 
 ### 2.2 Conceptual Abstraction
 
-The diagram below is a high-level abstraction of §2.1 — the six units
-and per-unit equipment are collapsed into a single representative
-**Block** node, and the three plant buses are shown as flat colored
-bars. Useful for executive briefings or when introducing the layered
-architecture without the unit-level detail.
+The diagram below is a high-level abstraction of §2.1 — every device,
+unit, and ancillary network is encapsulated into one of the two plant
+buses it lives on (**PDH** or **UDH**). Useful for executive briefings
+or when introducing the layered architecture without the unit-level
+detail.
 
 ```mermaid
 flowchart TB
-    PDH["PDH - Plant Data Highway<br/>Shared Services, BSC, HMI Servers, Mark VIe Controllers"]
-    BLK3["Block 3<br/>(GT3A, GT3B, ST3)"]
-    UDH["UDH - Unit Data Highway<br/>Excitation, Starting, On-Site Monitor, Firewalls"]
-    BLK4["Block 4<br/>(GT4A, GT4B, ST4)"]
-    BN["Bently Nevada Network<br/>Vibration and Blade Health Monitoring"]
+    subgraph MVTC["MV GE Mark VIe Turbine Control"]
+        direction TB
 
-    PDH --- BLK3
-    BLK3 --- UDH
-    UDH --- BLK4
-    BLK3 --- BN
-    BLK4 --- BN
-    BN --- UDH
+        subgraph PDH["PDH - Plant Data Highway"]
+            direction TB
+            PDH_SHARED["Shared Services<br/>NTP / EWS / Historian<br/>BSC PRI / SEC"]
+            PDH_HMI["Control Room HMI Servers<br/>CRM1-3SVR (Unit 3 Desk)<br/>CRM4-6SVR (Unit 4 Desk)"]
+            PDH_B3["Block 3 Unit Servers / HMIs<br/>(GT3A, GT3B, ST3)"]
+            PDH_B4["Block 4 Unit Servers / HMIs<br/>(GT4A, GT4B, ST4)"]
+        end
 
-    classDef pdh fill:#d8f3dc,stroke:#2d6a4f,stroke-width:1.5px,color:#1b4332
-    classDef udh fill:#ffd6e0,stroke:#9d174d,stroke-width:1.5px,color:#831843
-    classDef bn  fill:#cfe8ff,stroke:#1e40af,stroke-width:1.5px,color:#1e3a8a
-    classDef blk fill:#f8f9fa,stroke:#495057,stroke-width:1.5px,color:#212529
+        subgraph UDH["UDH - Unit Data Highway"]
+            direction TB
+            UDH_BN1["Bently Nevada System 1<br/>(+ System 1 Laser Printer)"]
+            UDH_B3["Block 3 Mark VIe Controllers<br/>+ Excitation / Starting<br/>(EX2100e, LX2100e, ePDA / GHM)<br/>+ BN 3500 Vibration Monitors"]
+            UDH_B4["Block 4 Mark VIe Controllers<br/>+ Excitation / Starting<br/>(EX2100e, LX2100e, ePDA / GHM)<br/>+ BN 3500 Vibration Monitors"]
+        end
 
-    class PDH pdh
-    class UDH udh
-    class BN bn
-    class BLK3,BLK4 blk
+        subgraph ADH["ADH / MDH - Auxiliary / Maintenance Data Highway"]
+            direction TB
+            ADH_OSM["On-Site Monitor<br/>uOSM / PSDM + Eth/Serial Converter<br/>Serial MODBUS to DCS"]
+            ADH_BHM["Blade Health Monitors<br/>(GTs only)"]
+            ADH_ATS["Auto Transfer Switch (APC)"]
+            ADH_LOCK["ADH/PDH Bridging Lock Box<br/>(installed, not utilized)"]
+        end
+
+        PDH === UDH
+        UDH === ADH
+    end
+
+    classDef pdh fill:#d8f3dc,stroke:#2d6a4f,stroke-width:1px,color:#1b4332
+    classDef udh fill:#ffd6e0,stroke:#9d174d,stroke-width:1px,color:#831843
+    classDef adh fill:#e9d8fd,stroke:#553c9a,stroke-width:1px,color:#322659
+
+    class PDH_SHARED,PDH_HMI,PDH_B3,PDH_B4 pdh
+    class UDH_BN1,UDH_B3,UDH_B4 udh
+    class ADH_OSM,ADH_BHM,ADH_ATS,ADH_LOCK adh
+
+    style MVTC fill:#f1f5f9,stroke:#0f172a,stroke-width:2px,color:#0f172a
+    style PDH  fill:#ebfbee,stroke:#2d6a4f,stroke-width:1.5px,color:#1b4332
+    style UDH  fill:#fff0f3,stroke:#9d174d,stroke-width:1.5px,color:#831843
+    style ADH  fill:#f5f0ff,stroke:#553c9a,stroke-width:1.5px,color:#322659
 ```
 
 ## 3. External Interfaces and Perimeter
@@ -242,8 +276,9 @@ envelope.
 
 The PDH is the top-level plant bus inside the Control Building. It
 connects shared plant services, the BSC server pair, the operator
-control-room HMI servers, and every Unit Server/HMI and Mark VIe
-controller across both blocks.
+control-room HMI servers, and every Unit Server/HMI across both blocks.
+The Mark VIe controllers themselves sit on the UDH (see §5) — the PDH
+carries the operator/server side of each unit.
 
 ### 4.1 Shared Services on the PDH
 
@@ -262,29 +297,30 @@ controller across both blocks.
 | CRM1SVR, CRM2SVR, CRM3SVR | Unit 3 Desk |
 | CRM4SVR, CRM5SVR, CRM6SVR | Unit 4 Desk |
 
-### 4.3 Unit Server / HMI and Mark VIe Controllers
+### 4.3 Unit Servers / HMIs
 
 Each combustion turbine and each steam turbine has its own
-**Unit Server/HMI** and **Mark VIe Controller** pair connected to the
-PDH.
+**Unit Server/HMI** connected to the PDH. The matching **Mark VIe
+Controller** for each unit lives on the UDH (see §5.3).
 
 | Unit | Devices on PDH |
 |---|---|
-| GT3A | Unit Server/HMI; Mark VIe Controller |
-| GT3B | Unit Server/HMI; Mark VIe Controller |
-| ST3  | Unit Server/HMI; Mark VIe Controller |
-| GT4A | Unit Server/HMI; Mark VIe Controller |
-| GT4B | Unit Server/HMI; Mark VIe Controller |
-| ST4  | Unit Server/HMI; Mark VIe Controller |
+| GT3A | Unit Server/HMI |
+| GT3B | Unit Server/HMI |
+| ST3  | Unit Server/HMI |
+| GT4A | Unit Server/HMI |
+| GT4B | Unit Server/HMI |
+| ST4  | Unit Server/HMI |
 
 > The diagram explicitly notes: *"GT4A, GT4B, and ST4 Same as GT3A, GT3B,
 > and ST3 Above"* — Block 4 is a structural mirror of Block 3.
 
 ## 5. UDH — Unit Data Highway
 
-The UDH sits below the PDH and carries the unit-level excitation,
-starting, ancillary monitoring, and on-site monitor traffic. The UDH is
-separated from the PDH by **two firewalls**:
+The UDH sits below the PDH and carries the per-unit **Mark VIe
+controllers**, the unit-level excitation, starting, ancillary monitoring,
+and on-site monitor traffic. The UDH is separated from the PDH by
+**two firewalls**:
 
 - **Fortinet FW** — segments the on-site monitor / serial MODBUS branch
   from the rest of the UDH.
@@ -308,17 +344,17 @@ separated from the PDH by **two firewalls**:
 | Bently Nevada System 1 | Bently Nevada System 1 server for machinery condition monitoring. |
 | Cisco ASA FW | Firewall between the unit excitation / starting branch and the UDH. |
 
-### 5.3 Per-Unit Excitation, Starting, and Ancillary Equipment
+### 5.3 Per-Unit Mark VIe, Excitation, Starting, and Ancillary Equipment
 
-Each unit zone (downstream of the `Cisco ASA FW`) carries the GE
-excitation control and unit-specific ancillary devices. The full set as
-drawn for Block 3:
+Each unit zone (downstream of the `Cisco ASA FW`) carries the unit's
+**Mark VIe Controller**, the GE excitation control, and unit-specific
+ancillary devices. The full set as drawn for Block 3:
 
 | Unit | Devices on UDH |
 |---|---|
-| GT3A | Exciter Control (GE EX2100e); Static Starter / LCI (GE LX2100e) |
-| GT3B | Exciter Control (GE EX2100e); ePDA (Block); GHM (Block) |
-| ST3  | Exciter Control (GE EX2100e) |
+| GT3A | Mark VIe Controller; Exciter Control (GE EX2100e); Static Starter / LCI (GE LX2100e) |
+| GT3B | Mark VIe Controller; Exciter Control (GE EX2100e); ePDA (Block); GHM (Block) |
+| ST3  | Mark VIe Controller; Exciter Control (GE EX2100e) |
 
 Block 4 (GT4A, GT4B, ST4) replicates the Block 3 layout.
 
