@@ -1,6 +1,13 @@
 # BESS IT & Control System Architecture Vision Document
 
-<!-- markdownlint-disable MD025 MD036 -->
+<!-- markdownlint-disable MD013 MD025 MD033 MD036 -->
+<!--
+  MD013 (line-length): Pandoc-converted reference doc uses one-paragraph-per-line style.
+  MD025 (single-h1):   Document intentionally uses multiple top-level headings per source.
+  MD033 (no-inline-html): Required for tables with merged-cell (rowspan/colspan) headers
+                          in §6 requirements; GFM pipe-tables cannot express them.
+  MD036 (no-emphasis-as-heading): Original document uses bold runs as sub-labels by design.
+-->
 
 ![image1](media/image1.png)
 
@@ -536,7 +543,7 @@ The guidance provided in this Architecture Vision Document is structured to be a
 </tbody>
 </table>
 
-## 2.2 Vendors and 3^(rd) Parties
+## 2.2 Vendors and 3rd Parties
 
 Vendors play an essential role in SCE’s BESS deployments by supplying and, in some cases, maintaining portions of the BESS control system. Depending on the project, a vendor may provide the full control system or individual components, such as the site controller, subsystem software, or integration layers, and may retain responsibility for updates, troubleshooting, and long‑term technical support. These arrangements allow SCE to leverage vendor expertise, but they also introduce operational and cybersecurity risks that require continued SCE oversight.
 
