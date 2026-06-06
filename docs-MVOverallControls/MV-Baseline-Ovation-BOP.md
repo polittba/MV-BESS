@@ -50,7 +50,7 @@ The Ovation deployment is organized as a layered, segmented architecture:
 ## 3. External Interfaces and Perimeter
 
 | Zone / Device | Role |
-|---|---|
+| --- | --- |
 | `GRID2` | External SCE grid-side network, brought to the MVGS firewall. |
 | `MVGS FW` | Edge firewall enforcing the boundary between `GRID2` and MVGS. |
 | `DMZ` | Demilitarized zone for controlled data exchange between `GRID2` and the plant. |
@@ -69,7 +69,7 @@ MOXA Serial/Ethernet gateways. The `PDH` segment carries the link to the
 plant's combustion turbine controls.
 
 | Source Device | Gateway / Link | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Trimark RIG | Serial/Ethernet (MOXA) | Remote Intelligent Gateway feed. |
 | Weather Station | Serial/Ethernet (MOXA) | Plant meteorological data. |
 | OMNI RTU | Serial/Ethernet (MOXA) | RTU feed from ECN. |
@@ -88,7 +88,7 @@ between field protocols and the Ovation ROOT network. All ELCs are
 deployed as **PRI/SEC (primary / secondary) redundant pairs**.
 
 | ELC Pair | Protocol Role | Upstream Source |
-|---|---|---|
+| --- | --- | --- |
 | ELC — RIG (PRI/SEC) | DNP3 Client | Trimark RIG |
 | ELC — Weather (PRI/SEC) | MODBUS Client | Weather Station |
 | ELC — EMS RTU (PRI/SEC) | DNP3 Server | EMS RTU |
@@ -110,7 +110,7 @@ servers.
 ### 6.1 Control Building Infrastructure
 
 | Device | ID | Role |
-|---|---|---|
+| --- | --- | --- |
 | GPS Clock | — | Time source for the Ovation environment. |
 | Printer | — | Plant printing services. |
 | Process Historian | 160 | Primary Ovation historian. |
@@ -122,7 +122,7 @@ servers.
 ### 6.2 Main Control Room
 
 | Operator Station | ID | Desk |
-|---|---|---|
+| --- | --- | --- |
 | Operator Station | 210 / 211 | Unit 3 Desk |
 | Operator Station | 220 / 221 | Unit 4 Desk |
 | Operator Station | 230 | Common / additional desk |
@@ -130,7 +130,7 @@ servers.
 ### 6.3 Backup Control Room
 
 | Device | ID | Role |
-|---|---|---|
+| --- | --- | --- |
 | Process Historian | 161 | Backup historian located in the Backup Control Room. |
 
 ## 7. HRSG Duct Burner Controls
@@ -140,7 +140,7 @@ controller pair and a local Operator Station. All connect back to the
 ROOT network.
 
 | HRSG Area | Operator Station | Controller (PRI/SEC) | Function |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | HRSG 3A | 212 | 38 / 88 | Duct Burner 3A |
 | HRSG 3B | 213 | 39 / 89 | Duct Burner 3B |
 | HRSG 4A | 222 | 48 / 98 | Duct Burner 4A |
@@ -152,7 +152,7 @@ The Gas Compressor train is controlled by a single Ovation controller
 pair with six Remote I/O (RIO) drops, one per compressor / suction skid.
 
 | Device | ID | Function |
-|---|---|---|
+| --- | --- | --- |
 | Controller | 20 / 70 | Gas Compressor master controller (PRI/SEC) |
 | RIO 20-1 | — | Gas Compressor Skid 1 |
 | RIO 20-2 | — | Gas Compressor Skid 2 |
@@ -167,7 +167,7 @@ Water Treatment is split across the Water Treatment MCC Building (process
 equipment and RIO) and the Water Treatment Lab (local HMI).
 
 | Location | Device | ID | Function |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Water Treatment MCC Building | Controller | 21 / 71 | Water Treatment master controller (PRI/SEC) |
 | Water Treatment MCC Building | RIO 21-1 | — | Reverse Osmosis |
 | Water Treatment MCC Building | RIO 21-2 | — | Pre-Treatment |
@@ -181,7 +181,7 @@ The PWCS LAN is a dedicated segment off the Control Building that hosts
 the cybersecurity tooling for the Ovation environment.
 
 | Device | Role |
-|---|---|
+| --- | --- |
 | Cybersecurity Suite User Interface | Operator / analyst console for the cyber suite. |
 | Cybersecurity Suite VM Host | Virtualization host for the cyber suite workloads. |
 | Cybersecurity Suite NAS | Storage for cyber suite data (logs, baselines, artifacts). |

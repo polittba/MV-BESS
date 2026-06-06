@@ -256,7 +256,7 @@ flowchart TB
 ## 3. External Interfaces and Perimeter
 
 | Zone / Device | Role |
-|---|---|
+| --- | --- |
 | `GRID2` | External SCE grid-side network, brought to the MVGS firewall. |
 | Grid Data Center (`GDC Networks`) | SCE GDC, double-firewalled, providing the controlled path from `GRID2` toward the Internet and back. |
 | Internet | Public Internet path used exclusively for GE RM&D. |
@@ -283,7 +283,7 @@ carries the operator/server side of each unit.
 ### 4.1 Shared Services on the PDH
 
 | Device | Role |
-|---|---|
+| --- | --- |
 | NTP Server | Time source for the GE DCS. |
 | BSC (Primary) | Backup / Site Controller — primary. |
 | BSC (Secondary) | Backup / Site Controller — secondary. |
@@ -293,7 +293,7 @@ carries the operator/server side of each unit.
 ### 4.2 Control Room HMI Servers
 
 | Server Group | Desk |
-|---|---|
+| --- | --- |
 | CRM1SVR, CRM2SVR, CRM3SVR | Unit 3 Desk |
 | CRM4SVR, CRM5SVR, CRM6SVR | Unit 4 Desk |
 
@@ -304,13 +304,13 @@ Each combustion turbine and each steam turbine has its own
 Controller** for each unit lives on the UDH (see §5.3).
 
 | Unit | Devices on PDH |
-|---|---|
+| --- | --- |
 | GT3A | Unit Server/HMI |
 | GT3B | Unit Server/HMI |
-| ST3  | Unit Server/HMI |
+| ST3 | Unit Server/HMI |
 | GT4A | Unit Server/HMI |
 | GT4B | Unit Server/HMI |
-| ST4  | Unit Server/HMI |
+| ST4 | Unit Server/HMI |
 
 > The diagram explicitly notes: *"GT4A, GT4B, and ST4 Same as GT3A, GT3B,
 > and ST3 Above"* — Block 4 is a structural mirror of Block 3.
@@ -330,7 +330,7 @@ and on-site monitor traffic. The UDH is separated from the PDH by
 ### 5.1 On-Site Monitor and Serial MODBUS Branch
 
 | Device | Role |
-|---|---|
+| --- | --- |
 | Fortinet FW | Firewall between this branch and the broader UDH. |
 | uOSM / PSDM (On Site Monitor) | GE On-Site Monitor / Plant Service Data Manager. |
 | Ethernet / Serial Converter | Protocol conversion between the on-site monitor and the DCS serial port. |
@@ -339,7 +339,7 @@ and on-site monitor traffic. The UDH is separated from the PDH by
 ### 5.2 Shared UDH Services
 
 | Device | Role |
-|---|---|
+| --- | --- |
 | System 1 Laser Printer | Printer for the Bently Nevada System 1 environment. |
 | Bently Nevada System 1 | Bently Nevada System 1 server for machinery condition monitoring. |
 | Cisco ASA FW | Firewall between the unit excitation / starting branch and the UDH. |
@@ -351,10 +351,10 @@ Each unit zone (downstream of the `Cisco ASA FW`) carries the unit's
 ancillary devices. The full set as drawn for Block 3:
 
 | Unit | Devices on UDH |
-|---|---|
+| --- | --- |
 | GT3A | Mark VIe Controller; Exciter Control (GE EX2100e); Static Starter / LCI (GE LX2100e) |
 | GT3B | Mark VIe Controller; Exciter Control (GE EX2100e); ePDA (Block); GHM (Block) |
-| ST3  | Mark VIe Controller; Exciter Control (GE EX2100e) |
+| ST3 | Mark VIe Controller; Exciter Control (GE EX2100e) |
 
 Block 4 (GT4A, GT4B, ST4) replicates the Block 3 layout.
 
@@ -364,13 +364,13 @@ A dedicated **Bently Nevada Network** sits below the UDH and connects
 each unit's machinery-protection devices. Per unit, the network carries:
 
 | Unit | Devices on Bently Nevada Network |
-|---|---|
+| --- | --- |
 | GT3A | Vibration Monitor (Bently Nevada 3500); Blade Health Monitor |
 | GT3B | Vibration Monitor (Bently Nevada 3500); Blade Health Monitor |
-| ST3  | Vibration Monitor (Bently Nevada 3500) |
+| ST3 | Vibration Monitor (Bently Nevada 3500) |
 | GT4A | Vibration Monitor (Bently Nevada 3500); Blade Health Monitor |
 | GT4B | Vibration Monitor (Bently Nevada 3500); Blade Health Monitor |
-| ST4  | Vibration Monitor (Bently Nevada 3500) |
+| ST4 | Vibration Monitor (Bently Nevada 3500) |
 
 The Bently Nevada Network feeds the `Bently Nevada System 1` server on
 the UDH for condition-monitoring data aggregation.
@@ -381,7 +381,7 @@ The ADH/MDH (Auxiliary / Maintenance Data Highway) is the bottom bus in
 the Control Building.
 
 | Device | Role |
-|---|---|
+| --- | --- |
 | Auto Transfer Switch (APC) | APC ATS for control-building power transfer. |
 | ADH/PDH Bridging Lock Box | **Installed but not utilized** — red on the diagram. Reserved bridge between ADH and PDH; intentionally not in service. |
 
