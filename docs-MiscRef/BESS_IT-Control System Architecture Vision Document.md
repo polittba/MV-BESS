@@ -332,7 +332,42 @@ This Architecture Vision Document defines how SCE approaches the IT and control�
 
 Document Version History
 
-[TABLE]
+<table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 23%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Version<br />Number</th>
+<th style="text-align: center;">Date</th>
+<th>Authored By</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0.1</td>
+<td style="text-align: center;"></td>
+<td>B. Smith</td>
+<td>Initial Draft</td>
+</tr>
+<tr>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">4/8/26</td>
+<td>B. Smith</td>
+<td>Changed title from Playbook to Architecture Vision Document to reflect technical architecture focus of this document.</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">5/14/26</td>
+<td>B. Smith</td>
+<td>First formal release of the Architecture Vision Document</td>
+</tr>
+</tbody>
+</table>
 
 Approvals
 
@@ -384,7 +419,122 @@ The guidance provided in this Architecture Vision Document is structured to be a
 
 ## 2.1 SCE Stakeholders
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 28%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Stakeholder</strong></th>
+<th style="text-align: center;"><strong>Role</strong></th>
+<th style="text-align: center;"><strong>Contributor(s)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jeff Gooding, Enterprise Architecture</td>
+<td>Sponsor</td>
+<td>Blake Politte</td>
+</tr>
+<tr>
+<td>Peter Gergis, IT PSC Generation</td>
+<td></td>
+<td>Dan Gill</td>
+</tr>
+<tr>
+<td>Steven Renteria, IT PSC T&amp;D</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Joseph Ponnaya Alexis, EA Grid</td>
+<td></td>
+<td>Warren Abatay</td>
+</tr>
+<tr>
+<td>Ricardo Montano, DMS &amp; DSCADA Support</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><p>Frank Elizondo,</p>
+<p>IT Network Engineering</p></td>
+<td>Network Data Engineering &amp; Design</td>
+<td>Edner Laus</td>
+</tr>
+<tr>
+<td>IT Network Operations</td>
+<td>End-to-end Network Operations</td>
+<td></td>
+</tr>
+<tr>
+<td>IT Network Security Engineering</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><p>Victor Calderone</p>
+<p>IT Cybersecurity Architecture &amp; Engineering</p></td>
+<td></td>
+<td>Ben Figueroa</td>
+</tr>
+<tr>
+<td><p>Joe Olague</p>
+<p>Cybersecurity Risk &amp; Engineering</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><p>Pauline Nguyen,</p>
+<p>IT Grid Infrastructure</p></td>
+<td></td>
+<td>Ian Barnes</td>
+</tr>
+<tr>
+<td><p>Selene Willis,</p>
+<p>Compliance and Governance Services</p></td>
+<td></td>
+<td>Sharman Atwood</td>
+</tr>
+<tr>
+<td><p>Monica Jain,</p>
+<p>IT NERC-CIP</p></td>
+<td></td>
+<td>Chewson Huang</td>
+</tr>
+<tr>
+<td><p>James Madia,</p>
+<p>Corp Security NERC-CIP</p></td>
+<td></td>
+<td>Daniella Martinez</td>
+</tr>
+<tr>
+<td><p>Generation Operations</p>
+<p>Lyle Laven</p></td>
+<td></td>
+<td>Marco Morales</td>
+</tr>
+<tr>
+<td><p>EP&amp;M</p>
+<p>Jorge Araiza</p></td>
+<td></td>
+<td>Angelica Sindelar</td>
+</tr>
+<tr>
+<td><p>SP&amp;E DER Engineering Design &amp; Development</p>
+<p>Ryan Miller</p></td>
+<td></td>
+<td>Matthew Kedis</td>
+</tr>
+<tr>
+<td>SP&amp;E Standards Engineering</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 ## 2.2 Vendors and 3^(rd) Parties
 
@@ -727,7 +877,101 @@ Understanding these differences helps ensure that maintenance activities (whethe
 
 **Figure 6 - Maintenance User Access Paths (Remote and Local)**
 
-[TABLE]
+<table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 16%" />
+<col style="width: 33%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Use Case</strong></th>
+<th style="text-align: center;"><strong>Access Device</strong></th>
+<th style="text-align: center;"><strong>Description</strong></th>
+<th style="text-align: center;"><strong>SCE Monitoring/Observability Capabilities</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1A</td>
+<td>GDC Citrix</td>
+<td>Remote access to LAN Device from GDC Citrix</td>
+<td><ul>
+<li><p>Citrix logs</p></li>
+<li><p>Network traffic from engineering workstation directly observable via GCS</p></li>
+<li><p>Endpoint logs from device may be available (if device supports logging services)</p></li>
+</ul></td>
+</tr>
+<tr>
+<td style="text-align: center;">1B</td>
+<td>GDC Citrix/DER Management Platform</td>
+<td>Remote access to LAN Device from GDC DER Management Platform.</td>
+<td><ul>
+<li><p>Citrix logs</p></li>
+<li><p>DER Management Platform Logs</p></li>
+<li><p>Network traffic from engineering workstation directly observable via GCS</p></li>
+<li><p>Endpoint logs from device may be available (if device supports logging services)</p></li>
+</ul></td>
+</tr>
+<tr>
+<td style="text-align: center;">2A</td>
+<td>Local Engineering Workstation</td>
+<td>Engineering workstation with permanent connection to one or more local BESS network segments</td>
+<td><ul>
+<li><p>Endpoint logging from engineering workstation</p></li>
+<li><p>Network traffic from engineering workstation directly observable via GCS</p></li>
+</ul></td>
+</tr>
+<tr>
+<td style="text-align: center;">3A</td>
+<td>Local Laptop/TCA</td>
+<td>Laptop or Transient Cyber Asset (TCA) temporarily connected to a local BESS network segment</td>
+<td><ul>
+<li><p>Network traffic from laptop/TCA directly observable via GCS</p></li>
+</ul></td>
+</tr>
+<tr>
+<td style="text-align: center;">3B</td>
+<td>Local Laptop/TCA</td>
+<td>Laptop or Transient Cyber Asset (TCA) temporarily connected to a LAN Device</td>
+<td><ul>
+<li><p>Endpoint logs from device may be available (if device supports logging services)</p></li>
+<li><p>Interaction between laptop/TCA and device not directly observable</p></li>
+</ul></td>
+</tr>
+<tr>
+<td style="text-align: center;">3C</td>
+<td>Local Laptop/TCA</td>
+<td>Laptop of Transient Cyber Asset (TCA) temporarily connected to a secondary network utilizing an external communications adapter</td>
+<td>None</td>
+</tr>
+<tr>
+<td style="text-align: center;">3D</td>
+<td>Local Laptop/TCA</td>
+<td>Laptop or Transient Cyber Asset (TCA) temporarily connected to a Standalone Device</td>
+<td>None</td>
+</tr>
+<tr>
+<td style="text-align: center;">4A</td>
+<td>Local Specialized Test Equipment</td>
+<td>Test equipment temporarily connected to a secondary network within the BESS control system</td>
+<td>None</td>
+</tr>
+<tr>
+<td style="text-align: center;">4B</td>
+<td>Local Specialized Test Equipment</td>
+<td>Test equipment temporarily connected to a Secondary Network Device within the BESS control system</td>
+<td>None</td>
+</tr>
+<tr>
+<td style="text-align: center;">4C</td>
+<td>Local Specialized Test Equipment</td>
+<td>Test equipment temporarily connected to a Standalone Device within the BESS control system</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
 
 **Table 2 - Maintenance Access Use Cases**
 
@@ -1051,7 +1295,181 @@ This subsection defines the business requirements applicable to the Presentation
 
 The requirements in this subsection reflect the P&I Layer’s role as an SCE‑owned, centrally governed component of the BESS architecture. They ensure that external systems interact with the BESS in a controlled, auditable, and vendor‑neutral manner, while preserving the separation between Dispatch and Operate functions and maintaining enterprise‑level security and observability.
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2" style="text-align: center;"><strong>ID</strong></th>
+<th colspan="3" style="text-align: center;"><strong>Applicability</strong></th>
+<th rowspan="2" style="text-align: center;"><strong>Requirements</strong></th>
+</tr>
+<tr>
+<th style="text-align: center;"><strong>Distribution</strong></th>
+<th style="text-align: center;"><strong>Reliability</strong></th>
+<th style="text-align: center;"><strong>Market</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">PI-01</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Standardized External System Interface</strong></p>
+<p>The Presentation &amp; Integration (P&amp;I) Layer shall provide the standardized, SCE‑governed interface through which all external systems exchange information and authorized control interactions with the native BESS control system. This includes system‑to‑system interactions supporting operational and real‑time needs, as well as business, analytics, reporting, maintenance, and lifecycle functions, ensuring consistent integration, governance, and interpretation across all external systems.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-02</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"></td>
+<td><p><strong>ADMS Interface for Distribution Support</strong></p>
+<p>For BESS deployments that provide Distribution grid support, the P&amp;I Layer shall support integration with the SCE Advanced Distribution Management System (ADMS) platform to enable operational visibility, situational awareness, and coordination with distribution operations.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-03</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"></td>
+<td><p><strong>DERMS Interface for Distribution Dispatch</strong></p>
+<p>For BESS deployments that are dispatched or coordinated as distributed energy resources, the P&amp;I Layer shall support integration with the SCE Distributed Energy Resource Management System (DERMS) to enable distribution‑driven dispatch, availability reporting, and operational coordination.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-04</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>GFRMS Interface for Generation Operations Oversight</strong></p>
+<p>For BESS deployments where SCE Generation Operations has dispatch, supervisory control, or monitoring responsibilities, the P&amp;I Layer shall support integration with the Generation Fleet Renewable Management System (GFRMS).</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-05</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>GenMS Interface for Market‑Oriented Dispatch</strong></p>
+<p>For BESS deployments that participate in CAISO energy or ancillary service markets, the P&amp;I Layer shall support integration with the Generation Management System (GenMS) for market‑related interactions, including the exchange of availability, schedules, performance data, and other information required to support market operations.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-06</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td><p><strong>DER Management Platform Integration</strong></p>
+<p>When a DER Gateway–based P&amp;I implementation is utilized, the P&amp;I Layer shall support integration with the DER Management Platform (e.g., Kalki.io) to provide a governed interface for external monitoring and supervisory control by SCE operational systems, secure remote access to the native BESS control system, and controlled export of approved warranty and performance data to vendors. In this architecture, the native BESS control system communicates with the DER Gateway, which in turn interfaces with the DER Management Platform; the DER Management Platform serves as the enterprise‑ and vendor‑facing integration point under SCE governance.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-07</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>CAISO RIG Interface for Market Participation</strong></p>
+<p>For BESS deployments that participate in CAISO energy or ancillary service markets, the P&amp;I Layer shall support integration with the CAISO Remote Intelligent Gateway (RIG) to enable exchange of market‑required telemetry, status, and other information necessary to support CAISO market participation and compliance.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-08</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>CAISO Meter Interface</strong></p>
+<p>For BESS deployments that participate in CAISO energy or ancillary service markets, the P&amp;I Layer shall support integration with CAISO‑approved revenue‑quality meter(s) to enable the collection, validation, and delivery of metering data required for market settlement, compliance, and performance reporting.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-09</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Data Quality and Metadata Preservation</strong></p>
+<p>The P&amp;I Layer shall preserve and propagate data quality indicators and metadata received from the native BESS control system.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-10</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Dispatch and Operate Separation</strong></p>
+<p>The P&amp;I Layer shall be capable of assigning control functions to one of two categories: Dispatch or Operate. Dispatch control of the BESS shall include actions related to parameters such as when, how much, and for how long the BESS should charge or discharge based on system needs, market signals, or operational strategies. Operate control of the BESS shall include all actions needed for real-time control and monitoring of the BESS to ensure it functions safely, efficiently, and within its technical limits.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-11</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Exclusive Dispatch Authority</strong></p>
+<p>The P&amp;I Layer shall enforce exclusive Dispatch Authority such that only one authorized system may dispatch the BESS at any given time, with dispatch requests from all other systems rejected.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-12</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Priority‑Based Dispatch Authority Arbitration</strong></p>
+<p>The P&amp;I Layer shall support priority‑based arbitration of Dispatch Authority, allowing reassignment of Dispatch Authority to a higher‑priority external system in emergency or critical operating scenarios in accordance with SCE‑defined policies.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-13</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Exclusive Operate Authority</strong></p>
+<p>The P&amp;I Layer shall enforce exclusive Operate Authority among all connected external systems and P&amp;I user interfaces such that only one source may issue operate‑level control actions at any given time.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-14</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Priority‑Based Operate Authority Arbitration</strong></p>
+<p>The P&amp;I Layer shall support priority‑based arbitration of Operate Authority, allowing reassignment of authority to a higher‑priority external system or interface during emergency or critical conditions.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-15</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Local P&amp;I User Interface Control Priority</strong></p>
+<p>The P&amp;I Layer shall support assigning the local P&amp;I user interface the highest control priority to assert Dispatch Authority, Operate Authority, or both, when required for safety or operational protection.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-16</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Real‑Time Control Authority Visibility</strong></p>
+<p>The P&amp;I Layer shall provide real‑time visibility to authorized users and systems indicating which external system or interface currently holds Dispatch Authority and Operate Authority.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-17</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Single Authoritative Control Outcome</strong></p>
+<p>The P&amp;I Layer shall present the native BESS control system with a single, resolved control outcome, regardless of the number of connected external systems or user interfaces.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-18</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Secure Remote User Access</strong></p>
+<p>The P&amp;I Layer shall support secure remote access for authorized operator, business, and maintenance users using SCE‑approved access methods and devices, in accordance with SCE cybersecurity and access governance requirements.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI-19</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Authorized User Access Enforcement</strong></p>
+<p>The P&amp;I Layer shall allow access only to users authenticated and authorized in accordance with SCE‑approved identity and access management policies.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## 6.2 Site Control & Monitoring (Native BESS Control System)
 
@@ -1059,37 +1477,569 @@ This subsection defines the business requirements applicable to the Site Control
 
 The requirements in this subsection recognize that the native BESS control system operates closest to the physical asset and is directly responsible for asset protection and reliable operation. Regardless of vendor implementation or maintenance arrangements, the native control system must consistently uphold SCE’s operational expectations, safety principles, and control authority rules as defined in this Architecture Vision Document.
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2" style="text-align: center;"><strong>ID</strong></th>
+<th colspan="3" style="text-align: center;"><strong>Applicability</strong></th>
+<th rowspan="2" style="text-align: center;"><strong>Requirements</strong></th>
+</tr>
+<tr>
+<th style="text-align: center;"><strong>Distribution</strong></th>
+<th style="text-align: center;"><strong>Reliability</strong></th>
+<th style="text-align: center;"><strong>Market</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">SCM-01</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Remote Monitoring and Operation</strong></p>
+<p>The native BESS control system shall support remote monitoring and operation, enabling normal operation without requiring onsite operator presence.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-02</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Operational Monitoring and Control via the P&amp;I Layer</strong></p>
+<p>The native BESS control system shall exchange real‑time telemetry, status, alarms, and authorized dispatch and control signals with SCE operational systems through the Presentation &amp; Integration (P&amp;I) Layer to support supervisory monitoring and operational control.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-03</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Time‑Stamped Data Integrity</strong></p>
+<p>The native BESS control system shall generate, maintain, and internally use time‑stamped operational data and events with sufficient resolution and accuracy to support reliable sequence‑of‑events reconstruction, supervisory monitoring and control, and post‑event analysis. Where source systems do not provide accurate native event timestamps, the BESS control system shall apply system‑generated timestamps.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-04</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Data Quality Flag Propagation</strong></p>
+<p>The native BESS control system shall assign and maintain data quality indicators for operational data and events to reflect limitations such as timing uncertainty, estimation, buffering, or degraded source reliability, and shall make these quality indicators available for internal decision‑making and external reporting through approved interfaces.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-05</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Constraint‑Aware Execution</strong></p>
+<p>The native BESS control system shall evaluate all external control (dispatch and operate) requests against internal safety, equipment, state‑of‑charge, thermal, and interconnection constraints and shall execute only those actions that can be performed safely and within defined limits.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-06</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Control Mode (External or Local)</strong></p>
+<p>The native BESS control system shall support two mutually exclusive control modes (external control and local control) where external supervisory control interactions (dispatch and operate) are accepted only when the system is in external control mode and are ignored when the system is placed in local control mode. Local control mode shall be available for safety, commissioning, or operational purposes and shall supersede all external control commands, including those received through the Presentation &amp; Integration (P&amp;I) Layer.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-07</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Scheduled and Event‑Driven Dispatch Support</strong></p>
+<p>The native BESS control system shall support execution of dispatch instructions issued as part of a predefined schedule as well as event‑driven or exception‑based dispatch actions.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-08</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Time‑Aligned Logging</strong></p>
+<p>The native BESS control system shall maintain time‑synchronized logs and event records sufficient to support event correlation and post‑incident analysis.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-09</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Local Event and Alarm Retention</strong></p>
+<p>The native BESS control system shall locally retain logs related to grid events, measurements, alarms, and operating modes for a minimum retention period sufficient to support reporting and post‑event analysis.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-10</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Use of SCE‑Provided Services Only</strong></p>
+<p>The native BESS control system shall operate without requiring access to any external services, platforms, or data sources outside of SCE’s enterprise or grid environments. Where external services are required to support operation, maintenance, or monitoring, the system shall utilize only SCE‑provided and SCE‑approved common services.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-11</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Secure Remote User Access</strong></p>
+<p>The native BESS control system shall support secure remote access for authorized operator, business, and maintenance users using SCE‑approved access methods and devices, in accordance with SCE cybersecurity and access governance requirements.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-12</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Secure Warranty and Performance Data Export</strong></p>
+<p>The native BESS control system shall provide a secure mechanism to export approved warranty and performance data through SCE‑approved networks and integration layers.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-13</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Controlled Configuration Management</strong></p>
+<p>The native BESS control system shall support controlled management of configuration settings that affect operational behavior, safety limits, interfaces, and control logic.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-14</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Authorized Configuration Changes Only</strong></p>
+<p>Configuration changes to the native BESS control system shall be restricted to authorized personnel and executed through SCE‑approved change management processes.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-15</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Configuration Version Awareness</strong></p>
+<p>The native BESS control system shall maintain visibility into active configuration versions, including sufficient information to identify when configuration changes have occurred.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-16</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Change Traceability and Auditability</strong></p>
+<p>The native BESS control system shall provide traceability for configuration and control changes sufficient to support operational review, incident investigation, and audit activities.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-17</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Safe Behavior During Configuration Changes</strong></p>
+<p>Configuration changes shall not place the native BESS control system in an unsafe or indeterminate state. The native BESS control system shall enforce safe operating behavior during and after configuration updates.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">SCM-18</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Rollback and Recovery Support</strong></p>
+<p>The native BESS control system shall support rollback or recovery to a previously approved configuration in the event that a configuration change results in unintended behavior or operational issues.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## 6.3 Back Office Integration
 
 This category defines how the BESS must interface with SCE control center or data center environments to support operator awareness, operational decision‑making, market needs, analytics, and cross‑functional coordination. It ensures the BESS can be incorporated seamlessly into SCE’s broader operational ecosystem.
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2" style="text-align: center;"><strong>ID</strong></th>
+<th colspan="3" style="text-align: center;"><strong>Applicability</strong></th>
+<th rowspan="2" style="text-align: center;"><strong>Requirements</strong></th>
+</tr>
+<tr>
+<th style="text-align: center;"><strong>Distribution</strong></th>
+<th style="text-align: center;"><strong>Reliability</strong></th>
+<th style="text-align: center;"><strong>Market</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">BO-01</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Centralized GDC Service Utilization</strong></p>
+<p>All IT services supporting BESS control system operations (including identity management, remote access, monitoring, logging, and data services) shall be provided through SCE’s centralized Grid Data Center (GDC).</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">BO-02</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Centralized Remote Access via GDC</strong></p>
+<p>Remote access for business and maintenance users shall be provided exclusively through SCE‑approved GDC remote access solutions, ensuring consistent authentication, authorization, monitoring, and auditability.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">BO-03</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Governed External Data Export</strong></p>
+<p>All data exports from the BESS control system to external vendor cloud environments or third‑party services shall be routed through GDC infrastructure and protected by SCE cybersecurity tools and data‑governance controls.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## 6.4 Networking and Communications Infrastructure
 
 This category addresses the connectivity and communication expectations necessary for the BESS to interact effectively with SCE systems and stakeholders. It establishes expectations for dependable communication paths, appropriate segmentation, and resilient data exchange to ensure operational continuity and coordinated control.
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2" style="text-align: center;"><strong>ID</strong></th>
+<th colspan="3" style="text-align: center;"><strong>Applicability</strong></th>
+<th rowspan="2" style="text-align: center;"><strong>Requirements</strong></th>
+</tr>
+<tr>
+<th style="text-align: center;"><strong>Distribution</strong></th>
+<th style="text-align: center;"><strong>Reliability</strong></th>
+<th style="text-align: center;"><strong>Market</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">NC-01</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>SCE‑Controlled External Communications</strong></p>
+<p>All external communications to/from the BESS shall use SCE‑provided and SCE‑controlled paths; no vendor‑initiated or unmanaged connectivity is permitted.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">NC-02</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>External Communications Capacity Planning (Bandwidth &amp; Latency)</strong></p>
+<p>External communications capacity shall account for aggregate bandwidth and latency needs across operational, business, maintenance, cybersecurity, and physical‑security traffic.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">NC-03</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Network Equipment Standards Compliance</strong></p>
+<p>All network, compute, and control components associated with the BESS control system (including both SCE‑provided and vendor‑provided or vendor‑maintained LAN equipment) shall comply with applicable SCE IT standards.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">NC-04</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>BESS LAN Placement Within the SCE Grid Environment</strong></p>
+<p>All Local Area Networks (LANs) supporting the BESS control system (including both SCE‑provided and vendor‑provided or vendor‑maintained LAN segments) shall reside logically within the SCE Grid environment.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">NC-05</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Vendor‑Provided Network Equipment Monitoring and Management</strong></p>
+<p>Any vendor‑provided/maintained LAN equipment within the BESS control system shall meet SCE’s minimum monitoring, configuration visibility, and security requirements and shall be treated as part of the SCE grid environment.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">NC-06</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Network Alarm and Incident Notification</strong></p>
+<p>The Network Operations Center (NOC) shall receive notification of all network alarms and network‑related incidents associated with the BESS control system, including those originating from both SCE‑provided and vendor‑provided or vendor‑maintained network infrastructure.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">NC-07</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Change &amp; Configuration Management</strong></p>
+<p>Changes to any BESS network infrastructure (SCE or vendor-provided/maintained) shall follow SCE change control with pre‑approval, rollback plans, and post‑change validation.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">NC-08</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Hardware Refresh</strong></p>
+<p>Network infrastructure within the BESS (SCE or vendor-provided/maintained) shall be capable of being refreshed in accordance with its defined lifecycle.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## 6.5 Cybersecurity
 
 This category outlines the protections required to safeguard BESS‑related systems and information from unauthorized access, misuse, or disruption. It defines the expectations for identity, access, monitoring, and oversight needed to support SCE’s security posture while enabling controlled vendor and operator involvement.
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2" style="text-align: center;"><strong>ID</strong></th>
+<th colspan="3" style="text-align: center;"><strong>Applicability</strong></th>
+<th rowspan="2" style="text-align: center;"><strong>Requirements</strong></th>
+</tr>
+<tr>
+<th style="text-align: center;"><strong>Distribution</strong></th>
+<th style="text-align: center;"><strong>Reliability</strong></th>
+<th style="text-align: center;"><strong>Market</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">CS-01</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Cybersecurity Policy Adherence</strong></p>
+<p>The BESS control system shall adhere to all applicable SCE Cybersecurity policies.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-02</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Cybersecurity Standards Compliance</strong></p>
+<p>The BESS control system, including all SCE‑provided and vendor‑provided or vendor‑maintained components, shall comply with the applicable cybersecurity requirements defined in the Cybersecurity Grid and Control Systems Standard.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-03</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Data Location and Use Requirements</strong></p>
+<p>SCE data associated with the BESS control system shall not be transmitted, processed, or stored outside the United States without prior written approval from SCE.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-04</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Data Classification and Governance</strong></p>
+<p>SCE data shall be classified and protected in accordance with the SCE Information Governance Policy.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-05</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Controlled Network Trust Boundaries</strong></p>
+<p>All network connections into, out of, and within the BESS control system shall be explicitly defined, authenticated, and controlled as part of SCE‑managed cybersecurity trust boundaries.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-06</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>BESS Network Inclusion in SCE Cybersecurity Domain</strong></p>
+<p>All network segments supporting the BESS control system, including vendor‑provided or vendor‑maintained LAN segments, shall be treated as in‑scope for SCE cybersecurity monitoring, detection, and incident response.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-07</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Network Monitoring and Control Tooling</strong></p>
+<p>Cybersecurity tools shall be deployed to monitor and control internal and external network communications associated with the BESS control system.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-08</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Centralized Security Logging and Alerting</strong></p>
+<p>Cybersecurity alerts and logs generated by all components of the BESS control system, including networking and security devices, shall be integrated with SCE Security Information and Event Management (SIEM) solution(s).</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-09</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Authorized Electronic Access</strong></p>
+<p>Electronic access to the BESS control system shall be limited to personnel who are approved and authorized by SCE.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-10</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Control of Transient and Temporary Connections</strong></p>
+<p>Transient connections to the BESS control system or any associated LAN segments—including laptops, transient cyber assets (TCAs), test equipment, or other temporary devices—shall be restricted to SCE‑approved devices only.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-11</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>SCE‑Approved Remote Access Methods</strong></p>
+<p>Remote access to systems and components within the BESS control system shall be permitted only through SCE‑approved cybersecurity access methods. This requirement applies to both authorized SCE personnel and authorized vendor personnel.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-12</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>SCE-Approved Software and Firmware Update Methods</strong></p>
+<p>Software, firmware, and operating system updates to systems and components within the BESS control system shall be performed only through SCE‑approved cybersecurity methods, regardless of whether the components are maintained by SCE or by a vendor.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CS-13</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>SCE-Approved External Data Export Methods</strong></p>
+<p>Data exports from the BESS control system to vendors or other third parties shall be permitted only through SCE‑approved cybersecurity methods and governed data‑exchange mechanisms.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## 6.6 Physical Security
 
 This category captures expectations for securing BESS facilities, equipment, and supporting infrastructure against unauthorized physical access or tampering. It ensures that physical safeguards are aligned with SCE standards and protect the operational integrity of BESS assets.
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2" style="text-align: center;"><strong>ID</strong></th>
+<th colspan="3" style="text-align: center;"><strong>Applicability</strong></th>
+<th rowspan="2" style="text-align: center;"><strong>Requirements</strong></th>
+</tr>
+<tr>
+<th style="text-align: center;"><strong>Distribution</strong></th>
+<th style="text-align: center;"><strong>Reliability</strong></th>
+<th style="text-align: center;"><strong>Market</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">PS-01</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Physical Access Control</strong></p>
+<p>Each BESS site shall implement physical access control measures consistent with SCE physical security standards to prevent unauthorized entry to the site and critical equipment.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PS-02</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Physical Security Monitoring</strong></p>
+<p>Each BESS site shall implement physical security monitoring consistent with SCE physical security standards to detect, record, and support response to security‑related events.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">PS-03</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Enterprise Physical Security Monitoring and Response</strong></p>
+<p>The Edison Security Operations Center (ESOC) shall provide centralized monitoring and response for physical security events at the BESS site in accordance with SCE physical security standards and incident response procedures.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## 6.7 Compliance and Governance
 
 This category sets expectations for documentation, oversight, and lifecycle practices needed to meet internal standards and external regulatory or contractual obligations. It ensures that BESS deployments are managed in a traceable, accountable, and policy‑aligned manner throughout their lifecycle.
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2" style="text-align: center;"><strong>ID</strong></th>
+<th colspan="3" style="text-align: center;"><strong>Applicability</strong></th>
+<th rowspan="2" style="text-align: center;"><strong>Requirements</strong></th>
+</tr>
+<tr>
+<th style="text-align: center;"><strong>Distribution</strong></th>
+<th style="text-align: center;"><strong>Reliability</strong></th>
+<th style="text-align: center;"><strong>Market</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">CG-01</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Vendor Activities Governed by SCE</strong></p>
+<p>All vendor access, support activities, and system interactions shall be governed by SCE‑approved processes, access pathways, and authorization controls and shall not bypass SCE governance, monitoring, or security controls.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CG-02</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Auditability and Evidence Retention</strong></p>
+<p>The BESS control system shall provide sufficient logs, records, and system information to support internal reviews, audits, compliance verification, and post‑event investigations in accordance with SCE governance practices.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CG-03</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Change and Exception Governance</strong></p>
+<p>Any changes, deviations, or exceptions to approved architectures, configurations, interfaces, or security controls shall follow SCE‑approved governance and change‑management processes and be documented and traceable.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CG-04</td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>Data Ownership and Stewardship</strong></p>
+<p>All data generated by or exchanged through the BESS control system shall be treated as SCE data and managed in accordance with SCE data‑governance, data‑residency, and information‑handling requirements.</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CG-05</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>X</strong></td>
+<td><p><strong>CAISO Market Participation Compliance</strong></p>
+<p>For BESS deployments that participate in CAISO markets, the DER shall operate in compliance with all applicable requirements and processes defined in the California Independent System Operator (CAISO) Business Practice Manuals (BPMs).</p></td>
+</tr>
+</tbody>
+</table>
 
 # 7 Architecture Principles
 
