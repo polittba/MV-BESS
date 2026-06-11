@@ -70,7 +70,7 @@ flowchart TB
     classDef elc fill:#e2f0d9,stroke:#3f6e2a,color:#1c3414
     classDef root fill:#d9e8f5,stroke:#1f4e79,color:#0e2236
     classDef sec fill:#f8d7da,stroke:#842029,color:#3b0a0e
-    classDef legacy fill:#fff2a8,stroke:#b8860b,color:#3a2a00,stroke-dasharray: 5 4
+    classDef legacy fill:#fff2a8,stroke:#b8860b,color:#3a2a00
     classDef spacer fill:none,stroke:none,color:transparent
     classDef rootSmall fill:#d9e8f5,stroke:#1f4e79,color:#0e2236,font-size:7px
 
@@ -118,9 +118,9 @@ flowchart TB
     class FW,DMZ,EDS perim
 
     %% ============================================================
-    %% Layer 3 - Field Acquisition (MOXA LAN + PDH)
+    %% Layer 3 - Field Acquisition (MOXA LAN)
     %% ============================================================
-    subgraph FIELD[Field Acquisition - MOXA LAN and PDH]
+    subgraph FIELD[Field Acquisition - MOXA LAN]
         direction LR
         subgraph SRC[Serial Sources]
             direction LR
@@ -131,16 +131,18 @@ flowchart TB
             FOCUS[FOCUS RTU]
         end
         MOXA[MOXA Serial/Ethernet Gateways]
-        PDH[GE DCS - PDH Link]
         SRC --- MOXA
     end
     class MOXA,EMSRTU,TRIMARK,WX,OMNI,FOCUS field
-    class PDH legacy
 
     %% ============================================================
-    %% Layer 4 - Field LAN Router (ACL)
+    %% Layer 4 - Field LAN Router (ACL) + standalone PDH link
     %% ============================================================
     FLR{{Field LAN Router - ACL}}:::perim
+    PDH_SP1( ):::spacer
+    PDH_SP2( ):::spacer
+    PDH[GE DCS - PDH Link]:::legacy
+    FIELD ~~~ PDH_SP1 ~~~ PDH_SP2 ~~~ PDH
 
     %% ============================================================
     %% Layer 5 - ELC LAN (PRI/SEC pairs)
