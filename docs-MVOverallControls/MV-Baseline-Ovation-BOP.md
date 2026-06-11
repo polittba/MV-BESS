@@ -387,6 +387,7 @@ flowchart LR
 ```
 
 > **Notes:**
+>
 > - **SCE EMS Network**, **SCE ECN**, and **SCE ECN for GenMS** are
 >   drawn as three independent top-level networks. There is **no edge
 >   between them** — they do not share infrastructure or transit each
