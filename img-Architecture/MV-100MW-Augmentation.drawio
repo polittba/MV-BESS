@@ -1,0 +1,203 @@
+<mxfile host="65bd71144e">
+    <diagram id="mv-100mw" name="MV 100MW Augmentation">
+        <mxGraphModel dx="1553" dy="1212" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1040" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="ext" value="External SCE Systems (Dispatch)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef0ff;strokeColor=#445577;verticalAlign=top;fontSize=13;fontStyle=1;strokeWidth=1" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="1320" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="ems" value="EMS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe7ff;strokeColor=#445577;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="160" y="75" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="genms" value="GenMS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe7ff;strokeColor=#445577;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="600" y="75" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="mkt" value="CAISO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe7ff;strokeColor=#445577;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="75" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="mv" value="Mountain View (MV) Site - SCE Grid Environment" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#555555;verticalAlign=top;fontSize=14;fontStyle=1;strokeWidth=2;dashed=0" parent="1" vertex="1">
+                    <mxGeometry x="40" y="170" width="1320" height="720" as="geometry"/>
+                </mxCell>
+                <mxCell id="sc" value="MV Site Controller&#xa;(single governed boundary + execution authority)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfffdf;strokeColor=#448844;fontSize=13;fontStyle=1;strokeWidth=2" parent="1" vertex="1">
+                    <mxGeometry x="500" y="210" width="400" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="ccgt" value="Existing MV 1000 MW CCGT Plant" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8f0ff;strokeColor=#4477aa;verticalAlign=top;fontSize=13;fontStyle=1;strokeWidth=2" parent="1" vertex="1">
+                    <mxGeometry x="70" y="320" width="600" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="dcs" value="Plant DCS (Ovation BOP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9dcf5;strokeColor=#4477aa;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="100" y="360" width="260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc" value="Turbine Controls (Mark VIe TC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9dcf5;strokeColor=#4477aa;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="380" y="360" width="260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctg" value="Combustion Turbines (CTG x N)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9dcf5;strokeColor=#4477aa;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="100" y="450" width="260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="hrsg" value="HRSGs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9dcf5;strokeColor=#4477aa;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="100" y="540" width="260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="stg" value="Steam Turbine + Generator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9dcf5;strokeColor=#4477aa;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="100" y="630" width="260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="gens" value="Generators / GSUs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9dcf5;strokeColor=#4477aa;fontSize=12;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="380" y="690" width="260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="aug" value="100 MW BESS Augmentation (new) - 2 x 50 MW" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe0ee;strokeColor=#aa4488;verticalAlign=top;fontSize=13;fontStyle=1;strokeWidth=2" parent="1" vertex="1">
+                    <mxGeometry x="730" y="320" width="600" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="bpc" value="BESS Plant Controller / EMS&#xa;(controls both 50 MW systems)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffc8de;strokeColor=#aa4488;fontSize=12;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="760" y="360" width="540" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="sysa" value="BESS System A (50 MW)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff0f8;strokeColor=#aa4488;verticalAlign=top;fontSize=12;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="760" y="450" width="260" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="pcs_a" value="PCS units (50 MW AC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffc8de;strokeColor=#aa4488;fontSize=11" parent="1" vertex="1">
+                    <mxGeometry x="780" y="485" width="220" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="bms_a" value="BMS / Battery containers&#xa;(MWh TBD)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffc8de;strokeColor=#aa4488;fontSize=11" parent="1" vertex="1">
+                    <mxGeometry x="780" y="565" width="220" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="aux_a" value="Aux / MV switchgear (A)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffc8de;strokeColor=#aa4488;fontSize=11" parent="1" vertex="1">
+                    <mxGeometry x="780" y="660" width="220" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="sysb" value="BESS System B (50 MW)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff0f8;strokeColor=#aa4488;verticalAlign=top;fontSize=12;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="450" width="260" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="pcs_b" value="PCS units (50 MW AC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffc8de;strokeColor=#aa4488;fontSize=11" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="485" width="220" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="bms_b" target="pcs_b">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="bms_b" value="BMS / Battery containers&#xa;(MWh TBD)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffc8de;strokeColor=#aa4488;fontSize=11" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="565" width="220" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="aux_b" value="Aux / MV switchgear (B)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffc8de;strokeColor=#aa4488;fontSize=11" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="660" width="220" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="prot" value="Protection Relays / IEDs (hardwired trips)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe2c8;strokeColor=#cc6622;fontSize=12;fontStyle=2" parent="1" vertex="1">
+                    <mxGeometry x="500" y="790" width="400" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="swy" value="MV Switchyard / PCC" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#555555;fontSize=13;fontStyle=1;strokeWidth=2" parent="1" vertex="1">
+                    <mxGeometry x="500" y="910" width="400" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="grid" value="SCE Grid / Interconnection" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fillColor=#dddddd;strokeColor=#555555;fontSize=14;fontStyle=1;strokeWidth=2" parent="1" vertex="1">
+                    <mxGeometry x="560" y="990" width="280" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend" value="Protocol legend" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#999999;verticalAlign=top;fontSize=11;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="40" y="900" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_iccp" value="DNP3 (external dispatch)" style="text;html=1;align=left;fontSize=10;fontColor=#2e8b57;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="55" y="925" width="200" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_dnp3" value="Ovation I/O (internal)" style="text;html=1;align=left;fontSize=10;fontColor=#6633aa;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="55" y="945" width="200" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_mod" value="MODBUS TCP / CAN" style="text;html=1;align=left;fontSize=10;fontColor=#d2691e;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="55" y="965" width="200" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_hw" value="Hardwired trip / e-stop (dashed)" style="text;html=1;align=left;fontSize=10;fontColor=#cc3333;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="55" y="985" width="200" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_elec" value="Electrical bus (heavy black)" style="text;html=1;align=left;fontSize=10;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="55" y="1005" width="200" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_ems_sc" value="DNP3" style="endArrow=classic;html=1;rounded=0;strokeColor=#2e8b57;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#2e8b57" parent="1" source="ems" target="sc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_genms_sc" value="DNP3" style="endArrow=classic;html=1;rounded=0;strokeColor=#2e8b57;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#2e8b57" parent="1" source="genms" target="sc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_mkt_sc" value="DNP3" style="endArrow=classic;html=1;rounded=0;strokeColor=#2e8b57;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#2e8b57" parent="1" source="mkt" target="sc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_sc_dcs" value="Ovation I/O (CCGT setpoints / status)" style="endArrow=classic;html=1;rounded=0;strokeColor=#6633aa;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#6633aa" parent="1" source="sc" target="dcs" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_sc_bpc" value="Ovation I/O (BESS setpoints, aggregated)" style="endArrow=classic;html=1;rounded=0;strokeColor=#6633aa;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#6633aa" parent="1" source="sc" target="bpc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_sc_pcsa_hw" value="hardwired fast curtail / e-stop" style="endArrow=classic;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;dashed=1;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#cc3333" parent="1" source="sc" target="pcs_a" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_sc_pcsb_hw" value="hardwired fast curtail / e-stop" style="endArrow=classic;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;dashed=1;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#cc3333" parent="1" source="sc" target="pcs_b" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_dcs_tc" style="endArrow=none;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;edgeStyle=orthogonalEdgeStyle" parent="1" source="dcs" target="tc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_tc_ctg" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;edgeStyle=orthogonalEdgeStyle" parent="1" source="tc" target="ctg" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_ctg_hrsg" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;edgeStyle=orthogonalEdgeStyle" parent="1" source="ctg" target="hrsg" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_hrsg_stg" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;edgeStyle=orthogonalEdgeStyle" parent="1" source="hrsg" target="stg" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_ctg_gens" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;edgeStyle=orthogonalEdgeStyle" parent="1" source="ctg" target="gens" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_stg_gens" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;edgeStyle=orthogonalEdgeStyle" parent="1" source="stg" target="gens" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_bpc_pcsa" value="MODBUS TCP" style="endArrow=classic;html=1;rounded=0;strokeColor=#d2691e;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#d2691e" parent="1" source="bpc" target="pcs_a" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_bpc_pcsb" value="MODBUS TCP" style="endArrow=classic;html=1;rounded=0;strokeColor=#d2691e;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#d2691e" parent="1" source="bpc" target="pcs_b" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_pcsa_bmsa" value="MODBUS TCP / CAN" style="endArrow=none;html=1;rounded=0;strokeColor=#d2691e;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#d2691e" parent="1" source="pcs_a" target="bms_a" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_pcsb_bmsb" value="MODBUS TCP / CAN" style="endArrow=none;html=1;rounded=0;strokeColor=#d2691e;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#d2691e" parent="1" source="pcs_b" target="bms_b" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_pcsa_auxa" style="endArrow=none;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;edgeStyle=orthogonalEdgeStyle" parent="1" source="pcs_a" target="aux_a" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_pcsb_auxb" style="endArrow=none;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;edgeStyle=orthogonalEdgeStyle" parent="1" source="pcs_b" target="aux_b" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_bmsa_prot" value="hardwired trip" style="endArrow=classic;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;dashed=1;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#cc3333" parent="1" source="bms_a" target="prot" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_bmsb_prot" value="hardwired trip" style="endArrow=classic;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;dashed=1;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#cc3333" parent="1" source="bms_b" target="prot" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_prot_pcsa" value="hardwired trip" style="endArrow=classic;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;dashed=1;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#cc3333" parent="1" source="prot" target="pcs_a" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_prot_pcsb" value="hardwired trip" style="endArrow=classic;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;dashed=1;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#cc3333" parent="1" source="prot" target="pcs_b" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_prot_sc" value="Ovation I/O events" style="endArrow=classic;html=1;rounded=0;strokeColor=#6633aa;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#6633aa" parent="1" source="prot" target="sc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_gens_swy" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=3;edgeStyle=orthogonalEdgeStyle" parent="1" source="gens" target="swy" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="510" y="780"/>
+                            <mxPoint x="700" y="780"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_pcsa_swy" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=3;edgeStyle=orthogonalEdgeStyle" parent="1" source="aux_a" target="swy" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="890" y="780"/>
+                            <mxPoint x="700" y="780"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_pcsb_swy" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=3;edgeStyle=orthogonalEdgeStyle" parent="1" source="aux_b" target="swy" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_swy_grid" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=3;edgeStyle=orthogonalEdgeStyle" parent="1" source="swy" target="grid" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1040" width="100%" font-family="Segoe UI, Arial, sans-serif" font-size="12">
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3366cc"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2e8b57"/>
+    </marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d2691e"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cc3333"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6633aa"/>
+    </marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#666"/>
+    </marker>
+    <marker id="arr-black" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="1040" fill="#ffffff"/>
+
+  <!-- ============== External SCE Systems band ============== -->
+  <rect x="40" y="40" width="1320" height="100" fill="#eef0ff" stroke="#445577" stroke-width="1"/>
+  <text x="55" y="60" font-size="13" font-weight="bold" fill="#445577">External SCE Systems (Dispatch)</text>
+
+  <rect x="160" y="75" width="200" height="50" rx="8" ry="8" fill="#dfe7ff" stroke="#445577"/>
+  <text x="260" y="105" text-anchor="middle" font-size="14" font-weight="bold">EMS</text>
+
+  <rect x="600" y="75" width="200" height="50" rx="8" ry="8" fill="#dfe7ff" stroke="#445577"/>
+  <text x="700" y="105" text-anchor="middle" font-size="14" font-weight="bold">GenMS</text>
+
+  <rect x="1040" y="75" width="200" height="50" rx="8" ry="8" fill="#dfe7ff" stroke="#445577"/>
+  <text x="1140" y="105" text-anchor="middle" font-size="14" font-weight="bold">CAISO</text>
+
+  <!-- ============== Mountain View site container ============== -->
+  <rect x="40" y="170" width="1320" height="720" fill="none" stroke="#555555" stroke-width="2"/>
+  <text x="55" y="190" font-size="14" font-weight="bold" fill="#555555">Mountain View (MV) Site &#8211; SCE Grid Environment</text>
+
+  <!-- MV Site Controller -->
+  <rect x="500" y="210" width="400" height="70" rx="10" ry="10" fill="#dfffdf" stroke="#448844" stroke-width="2"/>
+  <text x="700" y="235" text-anchor="middle" font-size="13" font-weight="bold">MV Site Controller</text>
+  <text x="700" y="258" text-anchor="middle" font-size="11" font-style="italic">single governed boundary + execution authority</text>
+
+  <!-- ============== CCGT container (LEFT) ============== -->
+  <rect x="70" y="320" width="600" height="440" fill="#e8f0ff" stroke="#4477aa" stroke-width="2"/>
+  <text x="85" y="340" font-size="13" font-weight="bold" fill="#4477aa">Existing MV 1000 MW CCGT Plant</text>
+
+  <rect x="100" y="360" width="260" height="50" rx="8" ry="8" fill="#c9dcf5" stroke="#4477aa"/>
+  <text x="230" y="390" text-anchor="middle">Plant DCS (Ovation BOP)</text>
+
+  <rect x="380" y="360" width="260" height="50" rx="8" ry="8" fill="#c9dcf5" stroke="#4477aa"/>
+  <text x="510" y="390" text-anchor="middle">Turbine Controls (Mark VIe TC)</text>
+
+  <rect x="100" y="450" width="260" height="50" rx="8" ry="8" fill="#c9dcf5" stroke="#4477aa"/>
+  <text x="230" y="480" text-anchor="middle">Combustion Turbines (CTG &#215; N)</text>
+
+  <rect x="100" y="540" width="260" height="50" rx="8" ry="8" fill="#c9dcf5" stroke="#4477aa"/>
+  <text x="230" y="570" text-anchor="middle">HRSGs</text>
+
+  <rect x="100" y="630" width="260" height="50" rx="8" ry="8" fill="#c9dcf5" stroke="#4477aa"/>
+  <text x="230" y="660" text-anchor="middle">Steam Turbine + Generator</text>
+
+  <rect x="380" y="690" width="260" height="50" rx="8" ry="8" fill="#c9dcf5" stroke="#4477aa"/>
+  <text x="510" y="720" text-anchor="middle" font-weight="bold">Generators / GSUs</text>
+
+  <!-- ============== BESS container (RIGHT) ============== -->
+  <rect x="730" y="320" width="600" height="440" fill="#ffe0ee" stroke="#aa4488" stroke-width="2"/>
+  <text x="745" y="340" font-size="13" font-weight="bold" fill="#aa4488">100 MW BESS Augmentation (new) &#8211; 2 &#215; 50 MW</text>
+
+  <rect x="760" y="360" width="540" height="60" rx="8" ry="8" fill="#ffc8de" stroke="#aa4488"/>
+  <text x="1030" y="385" text-anchor="middle" font-weight="bold">BESS Plant Controller / EMS</text>
+  <text x="1030" y="405" text-anchor="middle" font-style="italic">(controls both 50 MW systems)</text>
+
+  <!-- System A -->
+  <rect x="760" y="450" width="260" height="290" fill="#fff0f8" stroke="#aa4488"/>
+  <text x="775" y="470" font-size="12" font-weight="bold" fill="#aa4488">BESS System A (50 MW)</text>
+
+  <rect x="780" y="485" width="220" height="45" rx="8" ry="8" fill="#ffc8de" stroke="#aa4488"/>
+  <text x="890" y="512" text-anchor="middle" font-size="11">PCS units (50 MW AC)</text>
+
+  <rect x="780" y="565" width="220" height="55" rx="8" ry="8" fill="#ffc8de" stroke="#aa4488"/>
+  <text x="890" y="588" text-anchor="middle" font-size="11">BMS / Battery containers</text>
+  <text x="890" y="605" text-anchor="middle" font-size="10" font-style="italic">(MWh TBD)</text>
+
+  <rect x="780" y="660" width="220" height="45" rx="8" ry="8" fill="#ffc8de" stroke="#aa4488"/>
+  <text x="890" y="687" text-anchor="middle" font-size="11">Aux / MV switchgear (A)</text>
+
+  <!-- System B -->
+  <rect x="1040" y="450" width="260" height="290" fill="#fff0f8" stroke="#aa4488"/>
+  <text x="1055" y="470" font-size="12" font-weight="bold" fill="#aa4488">BESS System B (50 MW)</text>
+
+  <rect x="1060" y="485" width="220" height="45" rx="8" ry="8" fill="#ffc8de" stroke="#aa4488"/>
+  <text x="1170" y="512" text-anchor="middle" font-size="11">PCS units (50 MW AC)</text>
+
+  <rect x="1060" y="565" width="220" height="55" rx="8" ry="8" fill="#ffc8de" stroke="#aa4488"/>
+  <text x="1170" y="588" text-anchor="middle" font-size="11">BMS / Battery containers</text>
+  <text x="1170" y="605" text-anchor="middle" font-size="10" font-style="italic">(MWh TBD)</text>
+
+  <rect x="1060" y="660" width="220" height="45" rx="8" ry="8" fill="#ffc8de" stroke="#aa4488"/>
+  <text x="1170" y="687" text-anchor="middle" font-size="11">Aux / MV switchgear (B)</text>
+
+  <!-- Protection (between bottoms) -->
+  <rect x="500" y="790" width="400" height="50" rx="8" ry="8" fill="#ffe2c8" stroke="#cc6622" stroke-width="2"/>
+  <text x="700" y="820" text-anchor="middle" font-size="12" font-style="italic">Protection Relays / IEDs (hardwired trips)</text>
+
+  <!-- Switchyard / PCC ellipse -->
+  <ellipse cx="700" cy="940" rx="200" ry="30" fill="#eeeeee" stroke="#555555" stroke-width="2"/>
+  <text x="700" y="945" text-anchor="middle" font-size="13" font-weight="bold">MV Switchyard / PCC</text>
+
+  <!-- SCE Grid hexagon -->
+  <polygon points="580,990 820,990 840,1010 820,1030 580,1030 560,1010" fill="#dddddd" stroke="#555555" stroke-width="2"/>
+  <text x="700" y="1015" text-anchor="middle" font-size="14" font-weight="bold">SCE Grid / Interconnection</text>
+
+  <!-- ============== Edges ============== -->
+
+  <!-- Dispatch (DNP3 from EMS/GenMS, governed APIs from Market) -->
+  <polyline points="260,125 260,180 540,180 540,210" fill="none" stroke="#2e8b57" stroke-width="2" marker-end="url(#arr-green)"/>
+  <text x="380" y="173" font-size="10" fill="#2e8b57" font-weight="bold">DNP3</text>
+
+  <line x1="700" y1="125" x2="700" y2="210" stroke="#2e8b57" stroke-width="2" marker-end="url(#arr-green)"/>
+  <text x="710" y="170" font-size="10" fill="#2e8b57" font-weight="bold">DNP3</text>
+
+  <polyline points="1140,125 1140,180 860,180 860,210" fill="none" stroke="#2e8b57" stroke-width="2" marker-end="url(#arr-green)"/>
+  <text x="970" y="173" font-size="10" fill="#2e8b57" font-weight="bold">DNP3</text>
+
+  <!-- Site Controller -> CCGT DCS / BPC (Ovation I/O purple) -->
+  <polyline points="550,280 550,335 230,335 230,360" fill="none" stroke="#6633aa" stroke-width="2" marker-end="url(#arr-purple)"/>
+  <text x="290" y="328" font-size="10" fill="#6633aa" font-weight="bold">Ovation I/O (CCGT setpoints / status)</text>
+
+  <polyline points="850,280 850,335 1030,335 1030,360" fill="none" stroke="#6633aa" stroke-width="2" marker-end="url(#arr-purple)"/>
+  <text x="870" y="328" font-size="10" fill="#6633aa" font-weight="bold">Ovation I/O (BESS setpoints, aggregated)</text>
+
+  <!-- CCGT internals (gray) -->
+  <line x1="360" y1="385" x2="380" y2="385" stroke="#666" stroke-width="1"/>
+
+  <polyline points="510,410 510,435 230,435 230,450" fill="none" stroke="#666" stroke-width="1" marker-end="url(#arr-gray)"/>
+
+  <line x1="230" y1="500" x2="230" y2="540" stroke="#666" stroke-width="1" marker-end="url(#arr-gray)"/>
+  <line x1="230" y1="590" x2="230" y2="630" stroke="#666" stroke-width="1" marker-end="url(#arr-gray)"/>
+
+  <polyline points="230,680 230,715 380,715" fill="none" stroke="#666" stroke-width="1" marker-end="url(#arr-gray)"/>
+  <polyline points="360,475 530,475 530,690" fill="none" stroke="#666" stroke-width="1" marker-end="url(#arr-gray)"/>
+
+  <!-- BESS internals (MODBUS orange) -->
+  <line x1="890" y1="420" x2="890" y2="485" stroke="#d2691e" stroke-width="2" marker-end="url(#arr-orange)"/>
+  <text x="897" y="455" font-size="10" fill="#d2691e" font-weight="bold">MODBUS TCP</text>
+
+  <line x1="1170" y1="420" x2="1170" y2="485" stroke="#d2691e" stroke-width="2" marker-end="url(#arr-orange)"/>
+  <text x="1177" y="455" font-size="10" fill="#d2691e" font-weight="bold">MODBUS TCP</text>
+
+  <line x1="890" y1="530" x2="890" y2="565" stroke="#d2691e" stroke-width="2"/>
+  <text x="897" y="552" font-size="9" fill="#d2691e" font-weight="bold">MODBUS TCP / CAN</text>
+
+  <line x1="1170" y1="530" x2="1170" y2="565" stroke="#d2691e" stroke-width="2"/>
+  <text x="1177" y="552" font-size="9" fill="#d2691e" font-weight="bold">MODBUS TCP / CAN</text>
+
+  <!-- PCS -> AUX (gray, inside system gutters) -->
+  <polyline points="1000,510 1010,510 1010,683 1000,683" fill="none" stroke="#666" stroke-width="1"/>
+  <polyline points="1280,510 1290,510 1290,683 1280,683" fill="none" stroke="#666" stroke-width="1"/>
+
+  <!-- Protection (red dashed hardwired) -->
+  <polyline points="1000,592 1015,592 1015,775 900,775 900,790" fill="none" stroke="#cc3333" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr-red)"/>
+  <text x="1020" y="588" font-size="9" fill="#cc3333" font-weight="bold">hardwired trip</text>
+
+  <polyline points="1060,592 1045,592 1045,775 900,775" fill="none" stroke="#cc3333" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr-red)"/>
+  <text x="970" y="770" font-size="9" fill="#cc3333" font-weight="bold">hardwired trip</text>
+
+  <!-- PROT -> PCS_A (route around CCGT on the left) -->
+  <polyline points="500,815 60,815 60,505 780,505" fill="none" stroke="#cc3333" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr-red)"/>
+  <text x="70" y="500" font-size="9" fill="#cc3333" font-weight="bold">hardwired trip</text>
+
+  <!-- PROT -> PCS_B (route around AUG on the right) -->
+  <polyline points="900,815 1340,815 1340,505 1280,505" fill="none" stroke="#cc3333" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr-red)"/>
+  <text x="1245" y="500" font-size="9" fill="#cc3333" font-weight="bold">hardwired trip</text>
+
+  <!-- PROT -> SC (Ovation I/O events) -->
+  <line x1="700" y1="790" x2="700" y2="280" stroke="#6633aa" stroke-width="2" marker-end="url(#arr-purple)"/>
+  <text x="705" y="540" font-size="10" fill="#6633aa" font-weight="bold">Ovation I/O events</text>
+
+  <!-- Electrical to switchyard / grid (heavy black) -->
+  <!-- GENS -> SWY (route around PROT via gap) -->
+  <polyline points="640,715 660,715 660,870 600,870 600,910" fill="none" stroke="#000" stroke-width="3" marker-end="url(#arr-black)"/>
+
+  <!-- AUX_A -> SWY -->
+  <polyline points="1000,683 1015,683 1015,870 750,870 750,910" fill="none" stroke="#000" stroke-width="3" marker-end="url(#arr-black)"/>
+
+  <!-- AUX_B -> SWY -->
+  <polyline points="1280,683 1340,683 1340,860 850,860 850,910" fill="none" stroke="#000" stroke-width="3" marker-end="url(#arr-black)"/>
+
+  <!-- SWY -> GRID -->
+  <line x1="700" y1="970" x2="700" y2="990" stroke="#000" stroke-width="3" marker-end="url(#arr-black)"/>
+
+  <!-- ============== Legend ============== -->
+  <rect x="40" y="880" width="240" height="130" fill="#fafafa" stroke="#999999"/>
+  <text x="55" y="900" font-size="11" font-weight="bold">Protocol legend</text>
+
+  <line x1="55" y1="915" x2="95" y2="915" stroke="#2e8b57" stroke-width="2"/>
+  <text x="105" y="919" font-size="10" fill="#2e8b57" font-weight="bold">DNP3 (external dispatch)</text>
+
+  <line x1="55" y1="935" x2="95" y2="935" stroke="#6633aa" stroke-width="2"/>
+  <text x="105" y="939" font-size="10" fill="#6633aa" font-weight="bold">Ovation I/O (internal)</text>
+
+  <line x1="55" y1="955" x2="95" y2="955" stroke="#d2691e" stroke-width="2"/>
+  <text x="105" y="959" font-size="10" fill="#d2691e" font-weight="bold">MODBUS TCP / CAN</text>
+
+  <line x1="55" y1="975" x2="95" y2="975" stroke="#cc3333" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="105" y="979" font-size="10" fill="#cc3333" font-weight="bold">Hardwired trip / e-stop</text>
+
+  <line x1="55" y1="995" x2="95" y2="995" stroke="#000" stroke-width="3"/>
+  <text x="105" y="999" font-size="10" fill="#000" font-weight="bold">Electrical bus</text>
+
+</svg>
